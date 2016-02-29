@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryChooser.cs" />
+    <Compile Include="TagFiltering.cs" />
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
     </Compile>

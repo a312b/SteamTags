@@ -7,9 +7,13 @@ using System.Windows.Forms;
 
 namespace SteamTags
 {
-    class CategoryChooser
+    class TagFiltering
     {
-        public void categoryList(CheckedListBox checkedListBox1, WebBrowser webBrowser1)
+        public void run(CheckedListBox checkedListBox1, WebBrowser webBrowser1)
+        {
+            navigate(webBrowser1, categoryList(checkedListBox1));
+        }
+        public string categoryList(CheckedListBox checkedListBox1)
         {
             string categoryId = "";
             switch (checkedListBox1.SelectedItem.ToString())
@@ -72,10 +76,17 @@ namespace SteamTags
                     categoryId = checkedListBox1.SelectedItem.ToString();
                     break;
                 default:
+                    categoryId = "1";
                     break;
             }
+            return categoryId;
+        }
+
+        private void navigate(WebBrowser webBrowser1, string category, string specifier = "")
+        {
+            
             //string selectedCategory = "http://store.steampowered.com/tag/browse/#global_" + categoryId;
-            string selectedCategory = "http://store.steampowered.com/tag/en/" + categoryId + "/#p=0&tab=TopSellers";
+            string selectedCategory = "http://store.steampowered.com/tag/en/" + category + "/#p=0&tab=TopSellers";
 
             try
             {
@@ -85,7 +96,7 @@ namespace SteamTags
             {
                 webBrowser1.Navigate(new Uri("https://www.google.dk/search?q=404+not+found&ie=utf-8&oe=utf-8&gws_rd=cr&ei=uQ3UVtqrFaqy6ATyrZiYDw"));
             }
-
         }
+        
     }
 }

@@ -20,8 +20,8 @@ namespace SteamTags
         }
         public void button1_Click(object sender, EventArgs e)
         {
-            CategoryChooser cat = new CategoryChooser();
-            cat.categoryList(checkedListBox1, webBrowser1);
+            TagFiltering cat = new TagFiltering();
+            cat.run(checkedListBox1, webBrowser1);
             label3.Text = "Browsing " + checkedListBox1.SelectedItem.ToString();
         }
 
