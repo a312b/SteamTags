@@ -9,9 +9,9 @@ namespace SteamTags
 {
     class TagFiltering
     {
-        public void run(CheckedListBox checkedListBox1, WebBrowser webBrowser1)
+        public void run(CheckedListBox checkedListBox1, CheckedListBox checkedListBox2, WebBrowser webBrowser1)
         {
-            navigate(webBrowser1, categoryList(checkedListBox1));
+            navigate(webBrowser1, categoryList(checkedListBox1), specifierList(checkedListBox2));
         }
         public string categoryList(CheckedListBox checkedListBox1)
         {
@@ -81,13 +81,44 @@ namespace SteamTags
             }
             return categoryId;
         }
+        public int specifierList(CheckedListBox checkedListBox2)
+        {
+            int specifierId = 0;
+            if (checkedListBox2.SelectedItem != null)
+            {
+                switch (checkedListBox2.SelectedItem.ToString())
+                {
+                    case "Free to Play":
+                        specifierId = 113;
+                        break;
+                    case "Multiplayer":
+                        specifierId = 3859;
+                        break;
+                    case "Singleplayer":
+                        specifierId = 4182;
+                        break;
+                    case "Casual":
+                        specifierId = 597;
+                        break;
+                    case "Turn-Based":
+                        specifierId = 1677;
+                        break;
+                    default:
+                        break;
+                }
+            } 
+            return specifierId;
+        }
 
-        private void navigate(WebBrowser webBrowser1, string category, string specifier = "")
+        private void navigate(WebBrowser webBrowser1, string category, int specifier)
         {
             
             //string selectedCategory = "http://store.steampowered.com/tag/browse/#global_" + categoryId;
             string selectedCategory = "http://store.steampowered.com/tag/en/" + category + "/#p=0&tab=TopSellers";
-
+            if (specifier != 0)
+            {
+                selectedCategory = "http://store.steampowered.com/tag/en/" + category + "/#tag[]=" + specifier + "&p=0&tab=TopSellers";
+            }
             try
             {
                 webBrowser1.Navigate(new Uri(selectedCategory));

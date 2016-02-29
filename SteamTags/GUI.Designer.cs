@@ -36,13 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 5);
+            this.label1.Location = new System.Drawing.Point(114, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 0;
@@ -67,7 +68,7 @@
             "Fantasy",
             "Anime",
             "Space"});
-            this.checkedListBox1.Location = new System.Drawing.Point(40, 33);
+            this.checkedListBox1.Location = new System.Drawing.Point(75, 29);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(242, 154);
             this.checkedListBox1.TabIndex = 1;
@@ -75,7 +76,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 199);
+            this.button1.Location = new System.Drawing.Point(301, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 31);
             this.button1.TabIndex = 2;
@@ -86,13 +87,11 @@
             // webBrowser1
             // 
             this.webBrowser1.AllowWebBrowserDrop = false;
-            this.webBrowser1.IsWebBrowserContextMenuEnabled = false;
-            this.webBrowser1.Location = new System.Drawing.Point(-2, 243);
+            this.webBrowser1.Location = new System.Drawing.Point(-2, 253);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(701, 414);
+            this.webBrowser1.Size = new System.Drawing.Size(701, 404);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://store.steampowered.com/search/?filter=popular&sort_by=Released_DESC&os=win" +
         "", System.UriKind.Absolute);
@@ -100,10 +99,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 215);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Browsing ";
             // 
@@ -117,7 +117,7 @@
             "Multiplayer",
             "Singleplayer",
             "Turn-Based"});
-            this.checkedListBox2.Location = new System.Drawing.Point(353, 33);
+            this.checkedListBox2.Location = new System.Drawing.Point(388, 29);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(242, 154);
             this.checkedListBox2.TabIndex = 7;
@@ -126,11 +126,21 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(392, 5);
+            this.label4.Location = new System.Drawing.Point(427, 1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Specifier";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(4, 207);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
             // 
             // GUI
             // 
@@ -138,6 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 658);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -165,5 +176,6 @@
         public System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
