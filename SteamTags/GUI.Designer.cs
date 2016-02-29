@@ -36,7 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -132,23 +131,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Specifier";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(4, 207);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
             // GUI
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 658);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -176,6 +164,5 @@
         public System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
